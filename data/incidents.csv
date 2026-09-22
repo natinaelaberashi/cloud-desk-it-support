@@ -1,0 +1,11 @@
+id,issue,priority,team,status,resolution_hours,sla_met
+INC-1042,VPN connection failure,High,Network,Resolved,3.2,true
+INC-1041,Password reset / MFA,Medium,Access,Resolved,0.8,true
+INC-1040,Checkout application error,Critical,Applications,Pending,6.4,false
+INC-1039,Laptop performance,Low,Service Desk,Resolved,4.1,true
+INC-1038,User account locked,High,Access,Open,2.1,true
+INC-1037,Network latency,High,Network,Resolved,5.3,false
+INC-1036,CRM application issue,Medium,Applications,Resolved,2.7,true
+INC-1035,Software installation,Low,Service Desk,Resolved,1.4,true
+INC-1034,Payment timeout,Critical,Applications,Resolved,4.8,true
+INC-1033,Email access,Medium,Access,Pending,7.2,false
