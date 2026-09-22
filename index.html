@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="IT Service Desk Operations Dashboard — portfolio project by Natinael Abera Shibeshi">
+  <title>IT Service Desk Operations Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div><span class="eyebrow">PORTFOLIO PROJECT</span><h1>IT Service Desk Operations Dashboard</h1><p>Incident volume, SLA performance, priority mix and resolution trends.</p></div><button id="resetBtn">Reset filters</button></header>
+<main>
+<section class="filters">
+<label>Priority <select id="priority"><option value="All">All</option><option>Critical</option><option>High</option><option>Medium</option><option>Low</option></select></label>
+<label>Status <select id="status"><option value="All">All</option><option>Resolved</option><option>Open</option><option>Pending</option></select></label>
+<label>Team <select id="team"><option value="All">All</option><option>Service Desk</option><option>Network</option><option>Applications</option><option>Access</option></select></label>
+</section>
+<section class="kpis">
+<div class="card"><span>Total tickets</span><strong id="total">0</strong></div>
+<div class="card"><span>SLA compliance</span><strong id="sla">0%</strong></div>
+<div class="card"><span>Avg. resolution</span><strong id="avg">0h</strong></div>
+<div class="card"><span>Open / pending</span><strong id="open">0</strong></div>
+</section>
+<section class="grid">
+<div class="panel"><div class="panel-head"><h2>Tickets by priority</h2><span id="period">Sample dataset</span></div><div id="bars" class="bars"></div></div>
+<div class="panel"><div class="panel-head"><h2>Operational snapshot</h2></div><div id="insights" class="insights"></div></div>
+</section>
+<section class="panel"><div class="panel-head"><h2>Recent incidents</h2><span id="count"></span></div>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Issue</th><th>Priority</th><th>Team</th><th>Status</th><th>Resolution</th><th>SLA</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+</main>
+<footer>Built with HTML, CSS and JavaScript • Synthetic data for demonstration</footer>
+<script src="app.js"></script>
+</body></html>
