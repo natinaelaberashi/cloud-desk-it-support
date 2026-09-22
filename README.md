@@ -1,37 +1,63 @@
 # IT Service Desk Operations Dashboard
 
-A responsive portfolio project demonstrating **incident management, SLA monitoring, operational reporting, and data-driven support analysis**.
+A recruiter-friendly portfolio project demonstrating **incident management, SLA monitoring, operational reporting, and data-driven support analysis**.
 
 ## Live Demo
 
-**GitHub Pages:** https://natinaelaberashi.github.io/cloud-desk-it-support/
+https://natinaelaberashi.github.io/cloud-desk-it-support/
 
-## What it demonstrates
+## Business Scenario
+
+A support team needs a simple operational view of ticket volume, priority, SLA performance, resolution time, and team workload.
+
+This dashboard turns synthetic incident records into a practical service-desk reporting view.
+
+## Key Capabilities
 
 - Ticket volume and priority analysis
 - SLA compliance monitoring
 - Average resolution-time tracking
 - Open and pending incident visibility
-- Team-level operational analysis
+- Team-level workload analysis
 - Filtering by priority, status, and support team
-- Responsive dashboard design
+- Responsive dashboard presentation
 
-## Tech
+## Operational Workflow
 
-HTML • CSS • JavaScript
+```text
+Ticket Intake → Triage → Priority → Investigation → Resolution
+                         ↓
+                    SLA Monitoring
+                         ↓
+                   KPI Reporting
+```
+
+## Tech Stack
+
+**HTML • CSS • JavaScript • GitHub Actions • GitHub Pages**
 
 ## Dataset
 
-The dashboard uses **synthetic incident data** created for portfolio demonstration. No employer or customer data is included.
+The dashboard uses synthetic incident data created exclusively for portfolio demonstration.
 
-## Why this project
+No employer, customer, or confidential data is included.
 
-This project mirrors the type of operational reporting used in service desk, support engineering, transaction operations, and junior analyst roles.
+## What This Project Demonstrates
 
-## Run locally
+**Support Operations:** incident handling, prioritization, SLA monitoring, case visibility
+
+**Data Analysis:** KPI calculation, operational reporting, filtering, trend-oriented analysis
+
+**Delivery:** responsive front-end dashboard and GitHub Pages deployment
+
+## Run Locally
 
 Open `index.html` in a browser.
 
 ## Deployment
 
-The site is deployed with **GitHub Actions + GitHub Pages**.
+The project is deployed with **GitHub Actions + GitHub Pages**.
+
+## Portfolio Context
+
+This project is designed to demonstrate skills relevant to **service desk, technical support, operations analyst, production support, and junior data/BI-oriented roles**.
