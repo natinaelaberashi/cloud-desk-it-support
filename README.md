@@ -1,4 +1,4 @@
-# IT Service Desk Operations Dashboard
+# Operations Support & Incident Analytics Dashboard
 
 A recruiter-friendly portfolio project demonstrating **incident management, SLA monitoring, operational reporting, and data-driven support analysis**.
 
@@ -8,7 +8,7 @@ https://natinaelaberashi.github.io/cloud-desk-it-support/
 
 ## Business Scenario
 
-A support team needs a simple operational view of ticket volume, priority, SLA performance, resolution time, and team workload.
+An operations/support team needs a simple operational view of case volume, priority, SLA performance, resolution time and team workload.
 
 This dashboard turns synthetic incident records into a practical service-desk reporting view.
 
