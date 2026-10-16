@@ -17,7 +17,7 @@ class GeneratorTests(unittest.TestCase):
             datetime.fromisoformat(row["created_at"])
             if row["status"] == "Resolved":
                 self.assertTrue(row["resolved_at"])
-                self.assertEqual(row["sla_met"], str(row["resolution_hours"] <= row["sla_target_hours"]).lower())
+                self.assertEqual(row["sla_met"], str(float(row["resolution_hours"]) <= row["sla_target_hours"]).lower())
                 self.assertGreaterEqual(datetime.fromisoformat(row["resolved_at"]), datetime.fromisoformat(row["created_at"]))
             else:
                 self.assertEqual(row["resolved_at"], "")
