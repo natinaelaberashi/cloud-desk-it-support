@@ -28,3 +28,5 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify public deployment
+        run: python analytics/verify_live.py "https://natinaelaberashi.github.io/cloud-desk-it-support/"
