@@ -12,7 +12,8 @@ CATEGORIES = {
     "Applications": ["CRM application issue","Checkout application error","Application crash","API timeout"],
     "Service Desk": ["Laptop performance","Software installation","Printer unavailable","Device setup"],
 }
-TARGETS = {"Critical":4,"High":8,"Medium":24,"Low":72}
+PRIORITY_TARGETS = {"Critical":4,"High":8,"Medium":24,"Low":72}
+TARGETS = PRIORITY_TARGETS
 
 class LCG:
     def __init__(self, seed):
