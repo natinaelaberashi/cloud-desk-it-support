@@ -58,7 +58,7 @@ def generate(count=600, seed=2026):
 
 def write_csv(rows, path):
     with open(path,"w",newline="",encoding="utf-8") as stream:
-        writer=csv.DictWriter(stream,fieldnames=FIELDS,lineterminator="\\n")
+        writer=csv.DictWriter(stream,fieldnames=FIELDS,lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
