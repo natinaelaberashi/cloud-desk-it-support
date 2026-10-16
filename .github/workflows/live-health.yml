@@ -1,0 +1,18 @@
+name: Live website health check
+on:
+  schedule:
+    - cron: "17 7 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify public dashboard, JavaScript and dataset
+        run: python analytics/verify_live.py "https://natinaelaberashi.github.io/cloud-desk-it-support/"
