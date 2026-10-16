@@ -24,5 +24,7 @@ jobs:
         run: python -m unittest discover -s analytics -p 'test_*.py' -v
       - name: Generate and validate extended synthetic data
         run: python analytics/generate_data.py --output /tmp/incidents_extended.csv
+      - name: Confirm generated CSV matches committed dashboard dataset
+        run: cmp /tmp/incidents_extended.csv data/incidents_extended.csv
       - name: Generate reproducible metrics
         run: python analytics/analyze.py --output /tmp/service-desk-metrics.json
