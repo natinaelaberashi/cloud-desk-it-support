@@ -19,7 +19,11 @@ def get(base, path):
             raise RuntimeError(f"{url}: HTTP {response.status}")
         return response.read().decode("utf-8-sig")
 
-def verify(base):
+def verify(base, expected_sha=None):
+    if expected_sha:
+        deployed_sha = get(base, "deployment-version.txt").strip()
+        if deployed_sha != expected_sha:
+            raise AssertionError(f"Published commit {deployed_sha} does not match expected {expected_sha}")
     html = get(base, "index.html")
     for marker in ('id="trends"', 'id="teams"', 'id="load-status"', 'id="resetBtn"'):
         if marker not in html:
@@ -34,9 +38,10 @@ def verify(base):
 
 def main():
     base = sys.argv[1] if len(sys.argv) > 1 else "https://natinaelaberashi.github.io/cloud-desk-it-support/"
+    expected_sha = sys.argv[2] if len(sys.argv) > 2 else None
     for attempt in range(1, 13):
         try:
-            verify(base)
+            verify(base, expected_sha)
             return
         except (AssertionError, RuntimeError, HTTPError, URLError, TimeoutError) as exc:
             print(f"Attempt {attempt}/12: {exc}", flush=True)
