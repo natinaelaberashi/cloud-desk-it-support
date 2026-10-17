@@ -10,7 +10,7 @@ permissions:
   id-token: write
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   deploy:
     environment:
@@ -23,7 +23,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Stamp deployed commit
-        run: printf "%s\\n" "$GITHUB_SHA" > deployment-version.txt
+        run: echo "$GITHUB_SHA" > deployment-version.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
